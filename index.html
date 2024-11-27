@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POS System</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div class="min-h-screen bg-gray-100 text-gray-800">
+            <header class="bg-blue-600 text-white text-center py-4">
+                <h1 class="text-3xl font-bold">Local Store POS</h1>
+            </header>
+    
+            <main class="p-6 grid grid-cols-3 gap-6">
+                <!-- Products Section -->
+                <section id="products" class="col-span-2 bg-white shadow-md p-4 rounded">
+                    <h2 class="text-xl font-bold mb-4">Products</h2>
+                    <div id="product-list" class="grid grid-cols-3 gap-4">
+                        <!-- Products will be dynamically populated -->
+                    </div>
+                </section>
+    
+                <!-- Cart Section -->
+                <section id="cart" class="bg-white shadow-md p-4 rounded">
+                    <h2 class="text-xl font-bold mb-4">Cart</h2>
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr>
+                                <th class="border-b py-2">Item</th>
+                                <th class="border-b py-2">Price</th>
+                                <th class="border-b py-2">Qty</th>
+                                <th class="border-b py-2">Total</th>
+                                <th class="border-b py-2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-table">
+                            <!-- Cart items will appear here -->
+                        </tbody>
+                    </table>
+                    <div id="cart-summary" class="mt-4">
+                        <p class="text-sm"><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+                        <p class="text-sm"><strong>Tax (5%):</strong> $<span id="tax">0.00</span></p>
+                        <p class="text-lg font-bold"><strong>Total:</strong> $<span id="total">0.00</span></p>
+                    </div>
+                    <button id="checkout-btn" class="bg-green-500 text-white py-2 px-4 mt-4 w-full rounded hover:bg-green-600">
+                        Checkout
+                    </button>
+                </section>
+            </main>
+    
+            <!-- Order History Section -->
+            <section id="order-history" class="bg-white shadow-md p-6 mt-4 mx-6 rounded">
+                <h2 class="text-xl font-bold mb-4">Order History</h2>
+                <div id="order-list" class="grid gap-4">
+                    <!-- Order cards will appear here -->
+                </div>
+            </section>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
+    
+</html>
